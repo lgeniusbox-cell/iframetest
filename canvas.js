@@ -7,7 +7,8 @@ JSON.parse = function(text, reviver) {
         if (ra) {
             console.log(ra);
             ra.maxReadAheadMediaTimeMs = 200000;
-            ra.minReadAheadMediaTimeMs = 20000;
+            ra.minReadAheadMediaTimeMs = 5000;
+           ra.readAheadGrowthRateMs = 3000;
         }
     } catch (e) {}
     return obj;
