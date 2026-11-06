@@ -6,8 +6,8 @@ JSON.parse = function(text, reviver) {
         const ra = obj?.playerConfig?.mediaCommonConfig?.dynamicReadaheadConfig;
         if (ra) {
             console.log(ra);
-            ra.maxReadAheadMediaTimeMs = 300000;
-            ra.minReadAheadMediaTimeMs = 30000;
+            ra.maxReadAheadMediaTimeMs = 200000;
+            ra.minReadAheadMediaTimeMs = 20000;
         }
     } catch (e) {}
     return obj;
