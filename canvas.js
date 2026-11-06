@@ -156,6 +156,7 @@ const workerSrc = `
     canvas.style.boxSizing = 'border-box';
     canvas.style.border = '3px solid lime';        // proof that the canvas is what you see
     canvas.style.objectFit = getComputedStyle(video).objectFit || 'contain';
+canvas.style.top='100px';
 
     let actx, renderer;
     try {
@@ -178,7 +179,7 @@ const workerSrc = `
       // Hide the real video (audio keeps flowing through the AudioContext)
       video.hidden = true;
       video.style.visibility = 'hidden';
-
+video.style.display='none';
       const onFrame = (now, meta) => {
         try {
           const frame = new VideoFrame(video, { timestamp: Math.round(meta.mediaTime * 1e6) });
